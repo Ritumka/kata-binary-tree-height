@@ -10,34 +10,31 @@ Write a program that:
 
 ### Find the height of a single-node tree
 
+```ruby
+root = BinaryTreeNode.new
 
-
-describe "Tree Height" do
-  it "finds the height of a single-node tree" do
-    root = TreeNode.new
-    expect(tree_height(root)).to eq 1
-  end
-end
-
+BinaryTreeNode.height(root) == 1
+```
 
 ### Find the height of a 3-level binary tree
 
-describe "Tree Height" do
-  it "finds the height of a 3-level binary tree" do
-    root = TreeNode.new(1, TreeNode.new(2), TreeNode.new(3, nil, TreeNode.new(4)))
-    expect(tree_height(root)).to eq 3
-  end
-end
+```ruby
+root = BinaryTreeNode.new(1)
+root.left = BinaryTreeNode.new(2)
+root.right = BinaryTreeNode.new(3)
+root.left.left = BinaryTreeNode.new(4)
+root.left.right = BinaryTreeNode.new(5)
+
+BinaryTreeNode.height(root) == 3
+```
 
 ### Find the height of an uneven tree
 
-describe "Tree Height" do
-  it "correctly identifies the height of an uneven tree" do
-    root = TreeNode.new(1, TreeNode.new(2, TreeNode.new(3)), TreeNode.new(4))
-    expect(tree_height(root)).to eq 3
-  end
-end
+```ruby
+root = BinaryTreeNode.new(1)
+root.left = BinaryTreeNode.new(2)
+root.right = BinaryTreeNode.new(4)
+root.left.left = BinaryTreeNode.new(3)
 
-
-
-
+BinaryTreeNode.height(root) == 3
+```
