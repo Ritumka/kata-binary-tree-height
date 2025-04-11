@@ -9,7 +9,7 @@ class TestSolution < Minitest::Test
   def test_single_node_tree
     root = BinaryTreeNode.new
 
-    assert_equal 1, BinaryTreeNode.height(root)
+    assert_equal 1, root.height
   end
 
   def test_3_level_balanced_tree
@@ -23,7 +23,7 @@ class TestSolution < Minitest::Test
     root.right.left = BinaryTreeNode.new(4)
     root.right.right = BinaryTreeNode.new(5)
 
-    assert_equal 3, BinaryTreeNode.height(root)
+    assert_equal 3, root.height
   end
 
   def test_left_skewed_tree
@@ -35,7 +35,7 @@ class TestSolution < Minitest::Test
 
     root.left.left.left = BinaryTreeNode.new(4)
 
-    assert_equal 4, BinaryTreeNode.height(root)
+    assert_equal 4, root.height
   end
 
   def test_right_skewed_tree
@@ -47,6 +47,6 @@ class TestSolution < Minitest::Test
 
     root.right.right.right = BinaryTreeNode.new(4)
 
-    assert_equal 4, BinaryTreeNode.height(root)
+    assert_equal 4, root.height
   end
 end
