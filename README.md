@@ -10,6 +10,14 @@ Write a program that:
 
 ### Find the height of a single-node tree
 
+```yaml
+Tree Structure:
+      1
+
+Longest path: 1
+Height: 1
+```
+
 ```ruby
 root = BinaryTreeNode.new
 
@@ -17,6 +25,18 @@ BinaryTreeNode.height(root) == 1
 ```
 
 ### Find the height of a 3-level binary tree
+
+```yaml
+Tree Structure:
+       1
+     /   \
+    2     3
+   / \
+  4   5
+
+Longest path: 1 → 2 → 4 (or 5)
+Height: 3
+```
 
 ```ruby
 root = BinaryTreeNode.new(1)
@@ -29,6 +49,18 @@ BinaryTreeNode.height(root) == 3
 ```
 
 ### Find the height of an uneven tree
+
+```yaml
+Tree Structure:
+      1
+     / \
+    2   4
+   /
+  3
+
+Longest path: 1 → 2 → 3
+Height: 3
+```
 
 ```ruby
 root = BinaryTreeNode.new(1)
