@@ -7,6 +7,10 @@ class BinaryTreeNode
     @right = nil
   end
 
+  def height
+    BinaryTreeNode.height(self)
+  end
+
   def self.height(node)
     # TODO
   end

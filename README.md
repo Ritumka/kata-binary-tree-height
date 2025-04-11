@@ -21,7 +21,7 @@ Height: 1
 ```ruby
 root = BinaryTreeNode.new
 
-BinaryTreeNode.height(root) == 1
+root.height == 1
 ```
 
 ### Find the height of a 3-level binary tree
@@ -45,7 +45,7 @@ root.right = BinaryTreeNode.new(3)
 root.left.left = BinaryTreeNode.new(4)
 root.left.right = BinaryTreeNode.new(5)
 
-BinaryTreeNode.height(root) == 3
+root.height == 3
 ```
 
 ### Find the height of an uneven tree
@@ -68,5 +68,38 @@ root.left = BinaryTreeNode.new(2)
 root.right = BinaryTreeNode.new(4)
 root.left.left = BinaryTreeNode.new(3)
 
-BinaryTreeNode.height(root) == 3
+root.height == 3
 ```
+
+## Challenge
+
+### Breadth-First vs Depth-First Search
+
+- **Depth-First**: You keep going down left or right until you hit the end (a nil node). Then you backtrack and try the next branch.
+- **Breadth-First**: You process nodes in "levels" — root, then its children, then their children, etc. Usually done with a queue.
+
+Does your solution utilize Breadth-First or Depth-First Search?
+
+### Size
+
+Write a method that counts total number of nodes in the tree
+
+### Leaf Nodes
+
+Write a mehtod that counts all leaf nodes (no children)
+
+### Traversal
+
+```yaml
+      A
+     / \
+    B   C
+   / \
+  D   E
+```
+
+Write methods that convert the tree into an array of values in a specific order:
+
+- **Preorder**: Root → Left → Right (A B D E C)
+- **Inorder**: Left → Root → Right (D B E A C)
+- **Postorder**: Left → Right → Root (D E B C A)
