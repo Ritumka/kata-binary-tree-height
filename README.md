@@ -4,7 +4,6 @@ Write a program that:
 
 - Takes the root node of a binary tree as input.
 - Calculates the height of the tree, defined as the number of nodes along the longest path from the root node down to the farthest leaf node.
-- Calculates the height of the tree, defined as the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 ## Examples
 
