@@ -12,6 +12,10 @@ class BinaryTreeNode
   end
 
   def self.height(node)
-    # TODO
+    # require "debug"; debugger
+    return 0 if node.nil?
+    left_height = self.height(node.left)
+    right_height = self.height(node.right)
+    return [left_height, right_height].max + 1
   end
 end

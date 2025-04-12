@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "../solution"
+require_relative "../solution2"
 
 class TestSolution < Minitest::Test
   def test_empty_tree
